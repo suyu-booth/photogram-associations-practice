@@ -25,6 +25,7 @@ class Comment < ApplicationRecord
   )
   # Comment#photo: returns a row from the photos table associated to this comment by the photo_id column
   belongs_to(
-    :photo
+    :photo,
+    foreign_key: "photo_id"
   )
 end

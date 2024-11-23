@@ -28,12 +28,14 @@ class Photo < ApplicationRecord
 
   # Photo#comments: returns rows from the comments table associated to this photo by the photo_id column
   has_many(
-    :comments
+    :comments,
+    foreign_key: "photo_id"
   )
 
   # Photo#likes: returns rows from the likes table associated to this photo by the photo_id column
   has_many(
-    :likes
+    :likes,
+    foreign_key: "photo_id"
   )
   ## Indirect associations
 
